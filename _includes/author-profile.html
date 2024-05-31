@@ -24,7 +24,7 @@
       {% if author.keybase %}
         <li style="display: inline-block; margin-right: 10px;"><a href="https://keybase.io/{{ author.keybase }}" style="text-decoration: none; color: inherit;"><i class="fas fa-fw fa-key" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
-       {% if author.researchgate %}
+      {% if author.researchgate %}
         <li style="display: inline-block; margin-right: 10px;"><a href="{{ author.researchgate }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-researchgate" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.twitter %}
@@ -82,4 +82,14 @@
         <li style="display: inline-block; margin-right: 10px;"><a href="https://soundcloud.com/{{ author.soundcloud }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-soundcloud" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.weibo %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://www.weibo.com/{{ author.weibo }}" style="text-decoration
+        <li style="display: inline-block; margin-right: 10px;"><a href="https://www.weibo.com/{{ author.weibo }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-weibo" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+      {% endif %}
+      {% if author.zhihu %}
+        <li style="display: inline-block; margin-right: 10px;"><a href="https://www.zhihu.com/people/{{ author.zhihu }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-zhihu" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+      {% endif %}
+      {% if author.orcid %}
+        <li style="display: inline-block; margin-right: 10px;"><a href="https://orcid.org/{{ author.orcid }}" style="text-decoration: none; color: inherit;"><i class="ai ai-orcid ai-fw" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+      {% endif %}
+    </ul>
+  </div>
+</div>
