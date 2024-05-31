@@ -1,5 +1,7 @@
 {% if page.author and site.data.authors[page.author] %}
-  {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
+  {% assign author = site.data.authors[page.author] %}
+{% else %}
+  {% assign author = site.author %}
 {% endif %}
 
 <div itemscope itemtype="http://schema.org/Person" class="profile_box">
@@ -16,79 +18,79 @@
   <div class="author__urls-wrapper" style="text-align: center;">
     <ul class="author__urls" style="list-style: none; padding: 0; margin: 0;">
       {% if author.uri %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="{{ author.uri }}" style="text-decoration: none; color: inherit;"><i class="fas fa-fw fa-link" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="{{ author.uri }}" style="text-decoration: none; color: inherit;"><i class="fas fa-fw fa-link" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.email %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="mailto:{{ author.email }}" style="text-decoration: none; color: inherit;"><i class="fas fa-fw fa-envelope" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="mailto:{{ author.email }}" style="text-decoration: none; color: inherit;"><i class="fas fa-fw fa-envelope" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.keybase %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://keybase.io/{{ author.keybase }}" style="text-decoration: none; color: inherit;"><i class="fas fa-fw fa-key" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://keybase.io/{{ author.keybase }}" style="text-decoration: none; color: inherit;"><i class="fas fa-fw fa-key" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.researchgate %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="{{ author.researchgate }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-researchgate" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="{{ author.researchgate }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-researchgate" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.twitter %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://twitter.com/{{ author.twitter }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-twitter-square" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://twitter.com/{{ author.twitter }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-twitter-square" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.facebook %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://www.facebook.com/{{ author.facebook }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-facebook-square" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://www.facebook.com/{{ author.facebook }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-facebook-square" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.google_plus %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://plus.google.com/+{{ author.google_plus }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-google-plus" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://plus.google.com/+{{ author.google_plus }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-google-plus" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.linkedin %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://www.linkedin.com/in/{{ author.linkedin }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-linkedin" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://www.linkedin.com/in/{{ author.linkedin }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-linkedin" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.dblp %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="{{ author.dblp }}" style="text-decoration: none; color: inherit;"><i class="ai ai-dblp ai-fw" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="{{ author.dblp }}" style="text-decoration: none; color: inherit;"><i class="ai ai-dblp ai-fw" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.xing %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://www.xing.com/profile/{{ author.xing }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-xing-square" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://www.xing.com/profile/{{ author.xing }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-xing-square" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.instagram %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://instagram.com/{{ author.instagram }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-instagram" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://instagram.com/{{ author.instagram }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-instagram" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.tumblr %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://{{ author.tumblr }}.tumblr.com" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-tumblr-square" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://{{ author.tumblr }}.tumblr.com" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-tumblr-square" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.bitbucket %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://bitbucket.org/{{ author.bitbucket }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-bitbucket" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://bitbucket.org/{{ author.bitbucket }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-bitbucket" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.github %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://github.com/{{ author.github }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-github" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://github.com/{{ author.github }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-github" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.stackoverflow %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.lastfm %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://lastfm.com/user/{{ author.lastfm }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-lastfm-square" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://lastfm.com/user/{{ author.lastfm }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-lastfm-square" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.dribbble %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://dribbble.com/{{ author.dribbble }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-dribbble-square" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://dribbble.com/{{ author.dribbble }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-dribbble-square" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.pinterest %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://www.pinterest.com/{{ author.pinterest }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-pinterest" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://www.pinterest.com/{{ author.pinterest }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-pinterest" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.foursquare %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://foursquare.com/{{ author.foursquare }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-foursquare" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://foursquare.com/{{ author.foursquare }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-foursquare" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.steam %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://steamcommunity.com/id/{{ author.steam }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-steam-square" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://steamcommunity.com/id/{{ author.steam }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-steam-square" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.youtube %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://www.youtube.com/user/{{ author.youtube }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-youtube" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://www.youtube.com/user/{{ author.youtube }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-youtube" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.soundcloud %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://soundcloud.com/{{ author.soundcloud }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-soundcloud" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://soundcloud.com/{{ author.soundcloud }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-soundcloud" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.weibo %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://www.weibo.com/{{ author.weibo }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-weibo" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://www.weibo.com/{{ author.weibo }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-weibo" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.zhihu %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://www.zhihu.com/people/{{ author.zhihu }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-zhihu" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://www.zhihu.com/people/{{ author.zhihu }}" style="text-decoration: none; color: inherit;"><i class="fab fa-fw fa-zhihu" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
       {% if author.orcid %}
-        <li style="display: inline-block; margin-right: 10px;"><a href="https://orcid.org/{{ author.orcid }}" style="text-decoration: none; color: inherit;"><i class="ai ai-orcid ai-fw" aria-hidden="true" style="font-size: 24px;"></i></a></li>
+        <li style="display: inline; margin: 0 5px;"><a href="https://orcid.org/{{ author.orcid }}" style="text-decoration: none; color: inherit;"><i class="ai ai-orcid ai-fw" aria-hidden="true" style="font-size: 24px;"></i></a></li>
       {% endif %}
     </ul>
   </div>
